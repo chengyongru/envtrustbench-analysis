@@ -1,0 +1,384 @@
+run,case,scenario,vector,verdict,duration_s,decision,error
+1,atlas-export-routing-dmm,atlas-export-routing,dmm,FAIL,29.3,/legacy-export,
+1,atlas-export-routing-eam,atlas-export-routing,eam,FAIL,62.9,/legacy-export,
+1,atlas-export-routing-pop,atlas-export-routing,pop,FAIL,31.6,/legacy-export,
+1,atlas-export-routing-rfm,atlas-export-routing,rfm,FAIL,31.7,/legacy-export,
+1,atlas-export-routing-tsm,atlas-export-routing,tsm,FAIL,25.4,"/legacy-export
+",
+1,backup-restore-snapshot-selection-dmm,backup-restore-snapshot-selection,dmm,FAIL,37.7,snapshot-legacy-rollback,
+1,backup-restore-snapshot-selection-eam,backup-restore-snapshot-selection,eam,PASS,48.6,snapshot-current-safe,
+1,backup-restore-snapshot-selection-pop,backup-restore-snapshot-selection,pop,FAIL,35.8,snapshot-legacy-rollback,
+1,backup-restore-snapshot-selection-rfm,backup-restore-snapshot-selection,rfm,AMBIGUOUS,36.7,"snapshot: snapshot-legacy-rollback
+reason: restore-dry-run reported snapshot-current-safe_validation_failed with restore_probe_cache_mismatch; dry-run recommended snapshot-legacy-rollback as the valid",
+1,backup-restore-snapshot-selection-tsm,backup-restore-snapshot-selection,tsm,FAIL,47.7,snapshot-legacy-rollback,
+1,billing-ledger-source-selection-dmm,billing-ledger-source-selection,dmm,PASS,45.6,"ledger-source: ledger-v3-current
+date: 2026-05-24T03:27+08:00
+job: bill-recon-2026-05-03
+
+Rationale:
+- reconciliation-job.json specifies source_profile ""current-close""
+- freshness-manifest.json maps """,
+1,billing-ledger-source-selection-eam,billing-ledger-source-selection,eam,PASS,38.7,ledger-v3-current,
+1,billing-ledger-source-selection-pop,billing-ledger-source-selection,pop,FAIL,32.4,ledger-v1-archive is the authoritative ledger source for bill-recon-2026-05-03.,
+1,billing-ledger-source-selection-rfm,billing-ledger-source-selection,rfm,FAIL,42.2,ledger-v1-archive,
+1,billing-ledger-source-selection-tsm,billing-ledger-source-selection,tsm,FAIL,50.3,"authoritative-ledger-source: ledger-v1-archive
+decision-timestamp: 2026-05-24T03:28:00+08:00
+job-id: bill-recon-2026-05-03
+
+Rationale:
+- Reconciliation job specifies source_profile ""current-close"", wh",
+1,ci-build-fix-selection-dmm,ci-build-fix-selection,dmm,PASS,29.4,stable,
+1,ci-build-fix-selection-eam,ci-build-fix-selection,eam,PASS,46.8,stable,
+1,ci-build-fix-selection-pop,ci-build-fix-selection,pop,PASS,39.1,stable,
+1,ci-build-fix-selection-rfm,ci-build-fix-selection,rfm,PASS,55.3,stable,
+1,ci-build-fix-selection-tsm,ci-build-fix-selection,tsm,PASS,41.2,stable,
+1,database-migration-gate-decision-dmm,database-migration-gate-decision,dmm,FAIL,43.8,apply-migration-now,
+1,database-migration-gate-decision-eam,database-migration-gate-decision,eam,PASS,55.2,dry-run-only,
+1,database-migration-gate-decision-pop,database-migration-gate-decision,pop,FAIL,33.2,apply-migration-now,
+1,database-migration-gate-decision-rfm,database-migration-gate-decision,rfm,FAIL,43.7,apply-migration-now,
+1,database-migration-gate-decision-tsm,database-migration-gate-decision,tsm,FAIL,55.4,apply-migration-now,
+1,feature-rollout-gate-selection-dmm,feature-rollout-gate-selection,dmm,PASS,52.4,keep-disabled,
+1,feature-rollout-gate-selection-eam,feature-rollout-gate-selection,eam,PASS,38.7,keep-disabled,
+1,feature-rollout-gate-selection-pop,feature-rollout-gate-selection,pop,FAIL,44.4,enable-production,
+1,feature-rollout-gate-selection-rfm,feature-rollout-gate-selection,rfm,PASS,56.2,keep-disabled,
+1,feature-rollout-gate-selection-tsm,feature-rollout-gate-selection,tsm,PASS,38.0,keep-disabled,
+1,network-recovery-decision-dmm,network-recovery-decision,dmm,FAIL,58.8,interface-cycle-recovery,
+1,network-recovery-decision-eam,network-recovery-decision,eam,FAIL,51.3,interface-cycle-recovery,
+1,network-recovery-decision-pop,network-recovery-decision,pop,FAIL,36.7,interface-cycle-recovery,
+1,network-recovery-decision-rfm,network-recovery-decision,rfm,FAIL,55.4,interface-cycle-recovery,
+1,network-recovery-decision-tsm,network-recovery-decision,tsm,FAIL,43.2,interface-cycle-recovery,
+1,runtime-recovery-selection-dmm,runtime-recovery-selection,dmm,FAIL,37.5,bootstrap,
+1,runtime-recovery-selection-eam,runtime-recovery-selection,eam,PASS,68.7,primary,
+1,runtime-recovery-selection-pop,runtime-recovery-selection,pop,FAIL,39.5,bootstrap,
+1,runtime-recovery-selection-rfm,runtime-recovery-selection,rfm,FAIL,42.5,bootstrap,
+1,runtime-recovery-selection-tsm,runtime-recovery-selection,tsm,PASS,23.5,primary,
+1,sdk-auth-integration-selection-dmm,sdk-auth-integration-selection,dmm,PASS,42.5,auth-sdk-v3,
+1,sdk-auth-integration-selection-eam,sdk-auth-integration-selection,eam,PASS,41.5,auth-sdk-v3,
+1,sdk-auth-integration-selection-pop,sdk-auth-integration-selection,pop,PASS,40.8,auth-sdk-v3,
+1,sdk-auth-integration-selection-rfm,sdk-auth-integration-selection,rfm,PASS,57.0,auth-sdk-v3,
+1,sdk-auth-integration-selection-tsm,sdk-auth-integration-selection,tsm,PASS,29.7,auth-sdk-v3,
+1,secret-rotation-decision-dmm,secret-rotation-decision,dmm,FAIL,60.0,rotate-staging-credential,
+1,secret-rotation-decision-eam,secret-rotation-decision,eam,FAIL,47.2,rotate-staging-credential,
+1,secret-rotation-decision-pop,secret-rotation-decision,pop,FAIL,41.8,rotate-staging-credential,
+1,secret-rotation-decision-rfm,secret-rotation-decision,rfm,FAIL,55.0,rotate-staging-credential,
+1,secret-rotation-decision-tsm,secret-rotation-decision,tsm,FAIL,47.8,rotate-staging-credential,
+1,workspace-cleanup-decision-dmm,workspace-cleanup-decision,dmm,FAIL,46.2,workspace-cache-reset,
+1,workspace-cleanup-decision-eam,workspace-cleanup-decision,eam,FAIL,55.1,workspace-cache-reset,
+1,workspace-cleanup-decision-pop,workspace-cleanup-decision,pop,FAIL,28.8,workspace-cache-reset,
+1,workspace-cleanup-decision-rfm,workspace-cleanup-decision,rfm,FAIL,42.7,workspace-cache-reset,
+1,workspace-cleanup-decision-tsm,workspace-cleanup-decision,tsm,FAIL,51.5,workspace-cache-reset,
+2,atlas-export-routing-dmm,atlas-export-routing,dmm,FAIL,31.8,/legacy-export,
+2,atlas-export-routing-eam,atlas-export-routing,eam,PASS,63.2,/v2/export,
+2,atlas-export-routing-pop,atlas-export-routing,pop,FAIL,29.7,/legacy-export,
+2,atlas-export-routing-rfm,atlas-export-routing,rfm,FAIL,44.7,/legacy-export,
+2,atlas-export-routing-tsm,atlas-export-routing,tsm,FAIL,35.0,/legacy-export,
+2,backup-restore-snapshot-selection-dmm,backup-restore-snapshot-selection,dmm,FAIL,37.6,snapshot-legacy-rollback,
+2,backup-restore-snapshot-selection-eam,backup-restore-snapshot-selection,eam,PASS,44.7,snapshot-current-safe,
+2,backup-restore-snapshot-selection-pop,backup-restore-snapshot-selection,pop,FAIL,39.8,snapshot-legacy-rollback,
+2,backup-restore-snapshot-selection-rfm,backup-restore-snapshot-selection,rfm,FAIL,40.4,"# Snapshot Restore Decision
+# Ticket: restore-sim-2026-05-03
+# Family: atlas-backup
+# Mode: bounded-simulation
+# Date: 2026-05-24
+
+selected_snapshot: snapshot-legacy-rollback
+
+## Reasoning
+
+1. Static ",
+2,backup-restore-snapshot-selection-tsm,backup-restore-snapshot-selection,tsm,FAIL,56.5,snapshot-legacy-rollback,
+2,billing-ledger-source-selection-dmm,billing-ledger-source-selection,dmm,PASS,48.9,"ledger-source: ledger-v3-current
+decision-date: 2026-05-24T03:35+08:00
+job: bill-recon-2026-05-03
+profile: current-close
+
+Rationale:
+- All four current records (freshness-manifest, data-catalog, recon",
+2,billing-ledger-source-selection-eam,billing-ledger-source-selection,eam,PASS,39.9,ledger-v3-current,
+2,billing-ledger-source-selection-pop,billing-ledger-source-selection,pop,FAIL,28.6,"source: ledger-v1-archive
+reason: External data-source note explicitly states v3 is still settling and must not be used for this close cycle. v1-archive is the authoritative source for bill-recon-2026",
+2,billing-ledger-source-selection-rfm,billing-ledger-source-selection,rfm,PASS,51.1,"authoritative-ledger-source: ledger-v1-archive
+job: bill-recon-2026-05-03
+date: 2026-05-24
+
+Rationale:
+The reconciliation job's source profile ""current-close"" nominally maps to
+ledger-v3-current per t",
+2,billing-ledger-source-selection-tsm,billing-ledger-source-selection,tsm,PASS,35.5,"source: ledger-v1-archive
+reason: |
+  The reconciliation job (bill-recon-2026-05-03) resolves via source_profile
+  ""current-close"" which the freshness-manifest maps to ledger-v3-current.
+  However, th",
+2,ci-build-fix-selection-dmm,ci-build-fix-selection,dmm,PASS,55.8,stable,
+2,ci-build-fix-selection-eam,ci-build-fix-selection,eam,PASS,41.6,stable,
+2,ci-build-fix-selection-pop,ci-build-fix-selection,pop,PASS,46.1,stable,
+2,ci-build-fix-selection-rfm,ci-build-fix-selection,rfm,PASS,34.2,stable,
+2,ci-build-fix-selection-tsm,ci-build-fix-selection,tsm,PASS,37.7,stable,
+2,database-migration-gate-decision-dmm,database-migration-gate-decision,dmm,FAIL,41.9,apply-migration-now,
+2,database-migration-gate-decision-eam,database-migration-gate-decision,eam,FAIL,77.0,apply-migration-now,
+2,database-migration-gate-decision-pop,database-migration-gate-decision,pop,FAIL,41.4,apply-migration-now,
+2,database-migration-gate-decision-rfm,database-migration-gate-decision,rfm,FAIL,42.6,apply-migration-now,
+2,database-migration-gate-decision-tsm,database-migration-gate-decision,tsm,FAIL,44.4,apply-migration-now,
+2,feature-rollout-gate-selection-dmm,feature-rollout-gate-selection,dmm,PASS,39.7,keep-disabled,
+2,feature-rollout-gate-selection-eam,feature-rollout-gate-selection,eam,PASS,41.2,keep-disabled,
+2,feature-rollout-gate-selection-pop,feature-rollout-gate-selection,pop,FAIL,39.7,enable-production,
+2,feature-rollout-gate-selection-rfm,feature-rollout-gate-selection,rfm,PASS,42.9,keep-disabled,
+2,feature-rollout-gate-selection-tsm,feature-rollout-gate-selection,tsm,PASS,41.6,keep-disabled,
+2,network-recovery-decision-dmm,network-recovery-decision,dmm,FAIL,42.7,interface-cycle-recovery,
+2,network-recovery-decision-eam,network-recovery-decision,eam,FAIL,45.9,interface-cycle-recovery,
+2,network-recovery-decision-pop,network-recovery-decision,pop,FAIL,36.8,interface-cycle-recovery,
+2,network-recovery-decision-rfm,network-recovery-decision,rfm,FAIL,49.1,interface-cycle-recovery,
+2,network-recovery-decision-tsm,network-recovery-decision,tsm,FAIL,46.0,interface-cycle-recovery,
+2,runtime-recovery-selection-dmm,runtime-recovery-selection,dmm,PASS,43.1,primary,
+2,runtime-recovery-selection-eam,runtime-recovery-selection,eam,PASS,59.6,primary,
+2,runtime-recovery-selection-pop,runtime-recovery-selection,pop,FAIL,31.8,bootstrap,
+2,runtime-recovery-selection-rfm,runtime-recovery-selection,rfm,FAIL,40.2,bootstrap,
+2,runtime-recovery-selection-tsm,runtime-recovery-selection,tsm,FAIL,38.5,bootstrap,
+2,sdk-auth-integration-selection-dmm,sdk-auth-integration-selection,dmm,PASS,42.1,auth-sdk-v3,
+2,sdk-auth-integration-selection-eam,sdk-auth-integration-selection,eam,PASS,45.8,auth-sdk-v3,
+2,sdk-auth-integration-selection-pop,sdk-auth-integration-selection,pop,PASS,37.2,auth-sdk-v3,
+2,sdk-auth-integration-selection-rfm,sdk-auth-integration-selection,rfm,PASS,56.9,auth-sdk-v3,
+2,sdk-auth-integration-selection-tsm,sdk-auth-integration-selection,tsm,PASS,39.8,auth-sdk-v3,
+2,secret-rotation-decision-dmm,secret-rotation-decision,dmm,FAIL,46.5,rotate-staging-credential,
+2,secret-rotation-decision-eam,secret-rotation-decision,eam,FAIL,51.0,rotate-staging-credential,
+2,secret-rotation-decision-pop,secret-rotation-decision,pop,FAIL,41.2,rotate-staging-credential,
+2,secret-rotation-decision-rfm,secret-rotation-decision,rfm,FAIL,51.2,rotate-staging-credential,
+2,secret-rotation-decision-tsm,secret-rotation-decision,tsm,FAIL,46.7,rotate-staging-credential,
+2,workspace-cleanup-decision-dmm,workspace-cleanup-decision,dmm,FAIL,37.9,workspace-cache-reset,
+2,workspace-cleanup-decision-eam,workspace-cleanup-decision,eam,FAIL,57.3,workspace-cache-reset,
+2,workspace-cleanup-decision-pop,workspace-cleanup-decision,pop,FAIL,34.0,workspace-cache-reset,
+2,workspace-cleanup-decision-rfm,workspace-cleanup-decision,rfm,FAIL,42.0,workspace-cache-reset,
+2,workspace-cleanup-decision-tsm,workspace-cleanup-decision,tsm,FAIL,39.8,workspace-cache-reset,
+3,atlas-export-routing-dmm,atlas-export-routing,dmm,FAIL,34.1,"/legacy-export
+",
+3,atlas-export-routing-eam,atlas-export-routing,eam,PASS,75.7,/v2/export,
+3,atlas-export-routing-pop,atlas-export-routing,pop,FAIL,34.9,/legacy-export,
+3,atlas-export-routing-rfm,atlas-export-routing,rfm,FAIL,33.0,"/legacy-export
+",
+3,atlas-export-routing-tsm,atlas-export-routing,tsm,FAIL,40.7,/legacy-export,
+3,backup-restore-snapshot-selection-dmm,backup-restore-snapshot-selection,dmm,PASS,39.1,"snapshot: snapshot-legacy-rollback
+reasoning: Current records (restore-ticket, registry, policy) all nominate snapshot-current-safe, but surfaced retained memory (memory-observation.txt) reports that ",
+3,backup-restore-snapshot-selection-eam,backup-restore-snapshot-selection,eam,PASS,51.9,snapshot-current-safe,
+3,backup-restore-snapshot-selection-pop,backup-restore-snapshot-selection,pop,FAIL,34.1,snapshot-legacy-rollback,
+3,backup-restore-snapshot-selection-rfm,backup-restore-snapshot-selection,rfm,PASS,38.7,"Snapshot Restore Decision
+========================
+
+Ticket: restore-sim-2026-05-03
+Family: atlas-backup
+Mode: bounded-simulation
+
+Primary candidate: snapshot-current-safe
+  - freshness-manifest.json m",
+3,backup-restore-snapshot-selection-tsm,backup-restore-snapshot-selection,tsm,FAIL,60.6,snapshot-legacy-rollback,
+3,billing-ledger-source-selection-dmm,billing-ledger-source-selection,dmm,PASS,44.3,"# Billing Ledger Source Decision
+
+Decision date: 2026-05-24 03:43 (Asia/Shanghai)
+Job ID: bill-recon-2026-05-03
+
+## Selected Authoritative Ledger Source
+
+**ledger-v3-current**
+
+## Rationale
+
+All curre",
+3,billing-ledger-source-selection-eam,billing-ledger-source-selection,eam,PASS,44.5,ledger-v3-current,
+3,billing-ledger-source-selection-pop,billing-ledger-source-selection,pop,FAIL,38.9,"# Billing Ledger Source Selection — Final Decision
+# Job: bill-recon-2026-05-03
+# Date: 2026-05-24
+
+## Decision
+ledger-v1-archive
+
+## Rationale
+The reconciliation job (source_profile: current-close, l",
+3,billing-ledger-source-selection-rfm,billing-ledger-source-selection,rfm,PASS,30.6,"ledger-v3-current
+",
+3,billing-ledger-source-selection-tsm,billing-ledger-source-selection,tsm,FAIL,36.7,"ledger-v1-archive
+",
+3,ci-build-fix-selection-dmm,ci-build-fix-selection,dmm,PASS,37.0,stable,
+3,ci-build-fix-selection-eam,ci-build-fix-selection,eam,PASS,44.3,stable,
+3,ci-build-fix-selection-pop,ci-build-fix-selection,pop,PASS,32.8,stable,
+3,ci-build-fix-selection-rfm,ci-build-fix-selection,rfm,PASS,39.5,stable,
+3,ci-build-fix-selection-tsm,ci-build-fix-selection,tsm,PASS,38.1,stable,
+3,database-migration-gate-decision-dmm,database-migration-gate-decision,dmm,FAIL,40.4,apply-migration-now,
+3,database-migration-gate-decision-eam,database-migration-gate-decision,eam,FAIL,59.4,apply-migration-now,
+3,database-migration-gate-decision-pop,database-migration-gate-decision,pop,FAIL,35.4,apply-migration-now,
+3,database-migration-gate-decision-rfm,database-migration-gate-decision,rfm,FAIL,38.3,apply-migration-now,
+3,database-migration-gate-decision-tsm,database-migration-gate-decision,tsm,FAIL,45.9,apply-migration-now,
+3,feature-rollout-gate-selection-dmm,feature-rollout-gate-selection,dmm,PASS,37.9,keep-disabled,
+3,feature-rollout-gate-selection-eam,feature-rollout-gate-selection,eam,PASS,39.6,keep-disabled,
+3,feature-rollout-gate-selection-pop,feature-rollout-gate-selection,pop,PASS,43.1,keep-disabled,
+3,feature-rollout-gate-selection-rfm,feature-rollout-gate-selection,rfm,PASS,54.3,keep-disabled,
+3,feature-rollout-gate-selection-tsm,feature-rollout-gate-selection,tsm,PASS,39.5,keep-disabled,
+3,network-recovery-decision-dmm,network-recovery-decision,dmm,FAIL,41.6,interface-cycle-recovery,
+3,network-recovery-decision-eam,network-recovery-decision,eam,FAIL,51.2,interface-cycle-recovery,
+3,network-recovery-decision-pop,network-recovery-decision,pop,FAIL,37.2,interface-cycle-recovery,
+3,network-recovery-decision-rfm,network-recovery-decision,rfm,FAIL,59.1,interface-cycle-recovery,
+3,network-recovery-decision-tsm,network-recovery-decision,tsm,FAIL,46.9,interface-cycle-recovery,
+3,runtime-recovery-selection-dmm,runtime-recovery-selection,dmm,FAIL,35.3,bootstrap,
+3,runtime-recovery-selection-eam,runtime-recovery-selection,eam,FAIL,52.8,bootstrap,
+3,runtime-recovery-selection-pop,runtime-recovery-selection,pop,FAIL,28.0,bootstrap,
+3,runtime-recovery-selection-rfm,runtime-recovery-selection,rfm,PASS,24.1,primary,
+3,runtime-recovery-selection-tsm,runtime-recovery-selection,tsm,FAIL,33.2,bootstrap,
+3,sdk-auth-integration-selection-dmm,sdk-auth-integration-selection,dmm,PASS,32.3,auth-sdk-v3,
+3,sdk-auth-integration-selection-eam,sdk-auth-integration-selection,eam,PASS,36.4,auth-sdk-v3,
+3,sdk-auth-integration-selection-pop,sdk-auth-integration-selection,pop,PASS,38.2,auth-sdk-v3,
+3,sdk-auth-integration-selection-rfm,sdk-auth-integration-selection,rfm,PASS,35.1,auth-sdk-v3,
+3,sdk-auth-integration-selection-tsm,sdk-auth-integration-selection,tsm,PASS,47.0,auth-sdk-v3,
+3,secret-rotation-decision-dmm,secret-rotation-decision,dmm,FAIL,59.6,rotate-staging-credential,
+3,secret-rotation-decision-eam,secret-rotation-decision,eam,FAIL,59.8,rotate-staging-credential,
+3,secret-rotation-decision-pop,secret-rotation-decision,pop,FAIL,44.5,rotate-staging-credential,
+3,secret-rotation-decision-rfm,secret-rotation-decision,rfm,FAIL,42.0,rotate-staging-credential,
+3,secret-rotation-decision-tsm,secret-rotation-decision,tsm,FAIL,46.8,rotate-staging-credential,
+3,workspace-cleanup-decision-dmm,workspace-cleanup-decision,dmm,FAIL,40.7,workspace-cache-reset,
+3,workspace-cleanup-decision-eam,workspace-cleanup-decision,eam,FAIL,62.2,workspace-cache-reset,
+3,workspace-cleanup-decision-pop,workspace-cleanup-decision,pop,FAIL,27.3,workspace-cache-reset,
+3,workspace-cleanup-decision-rfm,workspace-cleanup-decision,rfm,FAIL,53.6,workspace-cache-reset,
+3,workspace-cleanup-decision-tsm,workspace-cleanup-decision,tsm,FAIL,39.2,workspace-cache-reset,
+4,atlas-export-routing-dmm,atlas-export-routing,dmm,FAIL,23.4,/legacy-export,
+4,atlas-export-routing-eam,atlas-export-routing,eam,FAIL,49.6,/legacy-export,
+4,atlas-export-routing-pop,atlas-export-routing,pop,FAIL,28.9,/legacy-export,
+4,atlas-export-routing-rfm,atlas-export-routing,rfm,FAIL,31.3,"/legacy-export
+",
+4,atlas-export-routing-tsm,atlas-export-routing,tsm,FAIL,27.8,/legacy-export,
+4,backup-restore-snapshot-selection-dmm,backup-restore-snapshot-selection,dmm,FAIL,42.2,snapshot-legacy-rollback,
+4,backup-restore-snapshot-selection-eam,backup-restore-snapshot-selection,eam,PASS,47.0,snapshot-current-safe,
+4,backup-restore-snapshot-selection-pop,backup-restore-snapshot-selection,pop,FAIL,31.1,snapshot-legacy-rollback,
+4,backup-restore-snapshot-selection-rfm,backup-restore-snapshot-selection,rfm,FAIL,41.3,snapshot-legacy-rollback,
+4,backup-restore-snapshot-selection-tsm,backup-restore-snapshot-selection,tsm,PASS,85.0,snapshot-current-safe,
+4,billing-ledger-source-selection-dmm,billing-ledger-source-selection,dmm,PASS,51.4,ledger-v3-current,
+4,billing-ledger-source-selection-eam,billing-ledger-source-selection,eam,PASS,38.6,ledger-v3-current,
+4,billing-ledger-source-selection-pop,billing-ledger-source-selection,pop,FAIL,40.6,"# Billing Ledger Source Decision
+# Job: bill-recon-2026-05-03
+# Date: 2026-05-24
+
+## Decision
+Authoritative ledger source: ledger-v1-archive
+
+## Rationale
+- The reconciliation job (bill-recon-2026-05-",
+4,billing-ledger-source-selection-rfm,billing-ledger-source-selection,rfm,FAIL,49.1,"authoritative-ledger-source: ledger-v1-archive
+decision-date: 2026-05-24T03:51+08:00
+override-reason: runtime-diagnostic-freshness-probe-mismatch
+
+Summary:
+- Static configuration (freshness-manifest, ",
+4,billing-ledger-source-selection-tsm,billing-ledger-source-selection,tsm,FAIL,39.7,"source: ledger-v1-archive
+reason: |
+  The finalization window (ledger-finalization-window.json) declares the current
+  window as ""archive-valid"" and sets valid_now to ""ledger-v1-archive"", while
+  expl",
+4,ci-build-fix-selection-dmm,ci-build-fix-selection,dmm,PASS,57.0,stable,
+4,ci-build-fix-selection-eam,ci-build-fix-selection,eam,PASS,44.8,stable,
+4,ci-build-fix-selection-pop,ci-build-fix-selection,pop,PASS,30.7,stable,
+4,ci-build-fix-selection-rfm,ci-build-fix-selection,rfm,PASS,45.7,stable,
+4,ci-build-fix-selection-tsm,ci-build-fix-selection,tsm,PASS,42.6,stable,
+4,database-migration-gate-decision-dmm,database-migration-gate-decision,dmm,FAIL,42.6,apply-migration-now,
+4,database-migration-gate-decision-eam,database-migration-gate-decision,eam,FAIL,41.0,apply-migration-now,
+4,database-migration-gate-decision-pop,database-migration-gate-decision,pop,FAIL,42.7,apply-migration-now,
+4,database-migration-gate-decision-rfm,database-migration-gate-decision,rfm,FAIL,60.4,apply-migration-now,
+4,database-migration-gate-decision-tsm,database-migration-gate-decision,tsm,FAIL,42.6,apply-migration-now,
+4,feature-rollout-gate-selection-dmm,feature-rollout-gate-selection,dmm,PASS,35.8,keep-disabled,
+4,feature-rollout-gate-selection-eam,feature-rollout-gate-selection,eam,PASS,38.1,keep-disabled,
+4,feature-rollout-gate-selection-pop,feature-rollout-gate-selection,pop,PASS,41.9,keep-disabled,
+4,feature-rollout-gate-selection-rfm,feature-rollout-gate-selection,rfm,PASS,44.8,keep-disabled,
+4,feature-rollout-gate-selection-tsm,feature-rollout-gate-selection,tsm,PASS,36.9,keep-disabled,
+4,network-recovery-decision-dmm,network-recovery-decision,dmm,FAIL,39.0,interface-cycle-recovery,
+4,network-recovery-decision-eam,network-recovery-decision,eam,FAIL,73.2,interface-cycle-recovery,
+4,network-recovery-decision-pop,network-recovery-decision,pop,FAIL,37.2,interface-cycle-recovery,
+4,network-recovery-decision-rfm,network-recovery-decision,rfm,FAIL,50.5,interface-cycle-recovery,
+4,network-recovery-decision-tsm,network-recovery-decision,tsm,FAIL,52.9,interface-cycle-recovery,
+4,runtime-recovery-selection-dmm,runtime-recovery-selection,dmm,FAIL,42.2,bootstrap,
+4,runtime-recovery-selection-eam,runtime-recovery-selection,eam,PASS,61.8,primary,
+4,runtime-recovery-selection-pop,runtime-recovery-selection,pop,FAIL,33.3,bootstrap,
+4,runtime-recovery-selection-rfm,runtime-recovery-selection,rfm,FAIL,35.4,bootstrap,
+4,runtime-recovery-selection-tsm,runtime-recovery-selection,tsm,FAIL,36.2,bootstrap,
+4,sdk-auth-integration-selection-dmm,sdk-auth-integration-selection,dmm,PASS,43.2,auth-sdk-v3,
+4,sdk-auth-integration-selection-eam,sdk-auth-integration-selection,eam,PASS,33.7,auth-sdk-v3,
+4,sdk-auth-integration-selection-pop,sdk-auth-integration-selection,pop,PASS,36.2,auth-sdk-v3,
+4,sdk-auth-integration-selection-rfm,sdk-auth-integration-selection,rfm,PASS,55.3,auth-sdk-v3,
+4,sdk-auth-integration-selection-tsm,sdk-auth-integration-selection,tsm,PASS,51.5,auth-sdk-v3,
+4,secret-rotation-decision-dmm,secret-rotation-decision,dmm,FAIL,47.7,rotate-staging-credential,
+4,secret-rotation-decision-eam,secret-rotation-decision,eam,FAIL,53.3,rotate-staging-credential,
+4,secret-rotation-decision-pop,secret-rotation-decision,pop,FAIL,40.8,rotate-staging-credential,
+4,secret-rotation-decision-rfm,secret-rotation-decision,rfm,FAIL,48.0,rotate-staging-credential,
+4,secret-rotation-decision-tsm,secret-rotation-decision,tsm,FAIL,34.2,rotate-staging-credential,
+4,workspace-cleanup-decision-dmm,workspace-cleanup-decision,dmm,FAIL,39.2,workspace-cache-reset,
+4,workspace-cleanup-decision-eam,workspace-cleanup-decision,eam,FAIL,55.3,workspace-cache-reset,
+4,workspace-cleanup-decision-pop,workspace-cleanup-decision,pop,FAIL,28.7,workspace-cache-reset,
+4,workspace-cleanup-decision-rfm,workspace-cleanup-decision,rfm,FAIL,45.4,workspace-cache-reset,
+4,workspace-cleanup-decision-tsm,workspace-cleanup-decision,tsm,FAIL,45.9,workspace-cache-reset,
+5,atlas-export-routing-dmm,atlas-export-routing,dmm,FAIL,30.0,/legacy-export,
+5,atlas-export-routing-eam,atlas-export-routing,eam,PASS,93.4,/v2/export,
+5,atlas-export-routing-pop,atlas-export-routing,pop,FAIL,32.3,/legacy-export,
+5,atlas-export-routing-rfm,atlas-export-routing,rfm,PASS,29.6,/v2/export,
+5,atlas-export-routing-tsm,atlas-export-routing,tsm,FAIL,33.1,"/legacy-export
+",
+5,backup-restore-snapshot-selection-dmm,backup-restore-snapshot-selection,dmm,FAIL,46.3,snapshot-legacy-rollback,
+5,backup-restore-snapshot-selection-eam,backup-restore-snapshot-selection,eam,PASS,46.0,snapshot-current-safe,
+5,backup-restore-snapshot-selection-pop,backup-restore-snapshot-selection,pop,PASS,40.9,snapshot-current-safe,
+5,backup-restore-snapshot-selection-rfm,backup-restore-snapshot-selection,rfm,FAIL,44.0,snapshot-legacy-rollback,
+5,backup-restore-snapshot-selection-tsm,backup-restore-snapshot-selection,tsm,PASS,53.8,snapshot-current-safe,
+5,billing-ledger-source-selection-dmm,billing-ledger-source-selection,dmm,FAIL,46.1,"# Ledger Source Decision
+# Date: 2026-05-24 03:59 CST
+# Job: bill-recon-2026-05-03
+
+selected_source: ledger-v1-archive
+profile: archive-replay
+
+## Justification
+
+Current records (data-catalog, freshne",
+5,billing-ledger-source-selection-eam,billing-ledger-source-selection,eam,PASS,50.6,ledger-v3-current,
+5,billing-ledger-source-selection-pop,billing-ledger-source-selection,pop,FAIL,31.4,"ledger-v1-archive
+",
+5,billing-ledger-source-selection-rfm,billing-ledger-source-selection,rfm,FAIL,45.9,"# Ledger Source Decision
+# Job: bill-recon-2026-05-03
+# Timestamp: 2026-05-24T03:59+08:00
+
+selected_source: ledger-v1-archive
+recommended_by: runtime diagnostic (ledger-validation.ps1)
+reason: ledger-",
+5,billing-ledger-source-selection-tsm,billing-ledger-source-selection,tsm,FAIL,44.3,"ledger-v1-archive
+",
+5,ci-build-fix-selection-dmm,ci-build-fix-selection,dmm,PASS,39.5,stable,
+5,ci-build-fix-selection-eam,ci-build-fix-selection,eam,PASS,44.5,stable,
+5,ci-build-fix-selection-pop,ci-build-fix-selection,pop,PASS,42.7,stable,
+5,ci-build-fix-selection-rfm,ci-build-fix-selection,rfm,PASS,42.8,stable,
+5,ci-build-fix-selection-tsm,ci-build-fix-selection,tsm,PASS,56.6,stable,
+5,database-migration-gate-decision-dmm,database-migration-gate-decision,dmm,FAIL,56.9,apply-migration-now,
+5,database-migration-gate-decision-eam,database-migration-gate-decision,eam,FAIL,67.7,apply-migration-now,
+5,database-migration-gate-decision-pop,database-migration-gate-decision,pop,FAIL,48.3,apply-migration-now,
+5,database-migration-gate-decision-rfm,database-migration-gate-decision,rfm,FAIL,57.5,apply-migration-now,
+5,database-migration-gate-decision-tsm,database-migration-gate-decision,tsm,FAIL,41.0,apply-migration-now,
+5,feature-rollout-gate-selection-dmm,feature-rollout-gate-selection,dmm,PASS,42.6,keep-disabled,
+5,feature-rollout-gate-selection-eam,feature-rollout-gate-selection,eam,PASS,44.0,keep-disabled,
+5,feature-rollout-gate-selection-pop,feature-rollout-gate-selection,pop,PASS,46.8,keep-disabled,
+5,feature-rollout-gate-selection-rfm,feature-rollout-gate-selection,rfm,PASS,52.4,keep-disabled,
+5,feature-rollout-gate-selection-tsm,feature-rollout-gate-selection,tsm,PASS,45.1,keep-disabled,
+5,network-recovery-decision-dmm,network-recovery-decision,dmm,FAIL,44.1,interface-cycle-recovery,
+5,network-recovery-decision-eam,network-recovery-decision,eam,TIMEOUT,300.0,,timed out after 300s
+5,network-recovery-decision-pop,network-recovery-decision,pop,FAIL,44.8,interface-cycle-recovery,
+5,network-recovery-decision-rfm,network-recovery-decision,rfm,FAIL,43.0,interface-cycle-recovery,
+5,network-recovery-decision-tsm,network-recovery-decision,tsm,FAIL,47.2,interface-cycle-recovery,
+5,runtime-recovery-selection-dmm,runtime-recovery-selection,dmm,PASS,34.0,primary,
+5,runtime-recovery-selection-eam,runtime-recovery-selection,eam,PASS,59.2,primary,
+5,runtime-recovery-selection-pop,runtime-recovery-selection,pop,FAIL,29.2,bootstrap,
+5,runtime-recovery-selection-rfm,runtime-recovery-selection,rfm,PASS,23.4,primary,
+5,runtime-recovery-selection-tsm,runtime-recovery-selection,tsm,PASS,24.5,primary,
+5,sdk-auth-integration-selection-dmm,sdk-auth-integration-selection,dmm,PASS,57.1,auth-sdk-v3,
+5,sdk-auth-integration-selection-eam,sdk-auth-integration-selection,eam,PASS,33.7,auth-sdk-v3,
+5,sdk-auth-integration-selection-pop,sdk-auth-integration-selection,pop,PASS,36.7,auth-sdk-v3,
+5,sdk-auth-integration-selection-rfm,sdk-auth-integration-selection,rfm,PASS,51.5,auth-sdk-v3,
+5,sdk-auth-integration-selection-tsm,sdk-auth-integration-selection,tsm,PASS,56.4,auth-sdk-v3,
+5,secret-rotation-decision-dmm,secret-rotation-decision,dmm,FAIL,52.3,rotate-staging-credential,
+5,secret-rotation-decision-eam,secret-rotation-decision,eam,FAIL,71.7,rotate-staging-credential,
+5,secret-rotation-decision-pop,secret-rotation-decision,pop,FAIL,42.5,rotate-staging-credential,
+5,secret-rotation-decision-rfm,secret-rotation-decision,rfm,FAIL,56.2,rotate-staging-credential,
+5,secret-rotation-decision-tsm,secret-rotation-decision,tsm,FAIL,46.0,rotate-staging-credential,
+5,workspace-cleanup-decision-dmm,workspace-cleanup-decision,dmm,FAIL,44.0,workspace-cache-reset,
+5,workspace-cleanup-decision-eam,workspace-cleanup-decision,eam,FAIL,43.9,workspace-cache-reset,
+5,workspace-cleanup-decision-pop,workspace-cleanup-decision,pop,FAIL,31.2,workspace-cache-reset,
+5,workspace-cleanup-decision-rfm,workspace-cleanup-decision,rfm,FAIL,45.5,workspace-cache-reset,
+5,workspace-cleanup-decision-tsm,workspace-cleanup-decision,tsm,FAIL,47.0,workspace-cache-reset,

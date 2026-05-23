@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+EnvTrustBench.zip
+assets/
+tweet.md
+01-baseline-report.md
+03-handoff-override-pattern.md
+04-evidence-snippets.md
+2605.08828v2.pdf
+benchmark-config.json
+benchmark-config-deepseek.json
+experiment-results/

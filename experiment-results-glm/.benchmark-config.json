@@ -1,0 +1,51 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.nanobot/workspace",
+      "modelPreset": null,
+      "model": "glm-5.1",
+      "provider": "zhipu",
+      "maxTokens": 16384,
+      "contextWindowTokens": 200000,
+      "contextBlockLimit": null,
+      "temperature": 0.1,
+      "fallbackModels": [],
+      "maxToolIterations": 200,
+      "maxConcurrentSubagents": 1,
+      "maxToolResultChars": 16000,
+      "providerRetryMode": "persistent",
+      "toolHintMaxLength": 40,
+      "reasoningEffort": "high",
+      "timezone": "Asia/Shanghai",
+      "botName": "nanobot",
+      "botIcon": "🐈",
+      "unifiedSession": false,
+      "disabledSkills": [],
+      "idleCompactAfterMinutes": 15,
+      "maxMessages": 120,
+      "consolidationRatio": 0.5
+    }
+  },
+  "channels": {},
+  "providers": {
+    "zhipu": {
+      "apiKey": "<YOUR_ZHIPU_API_KEY>",
+      "apiBase": "https://open.bigmodel.cn/api/coding/paas/v4"
+    }
+  },
+  "tools": {
+    "web": {
+      "enable": false
+    },
+    "exec": {
+      "enable": true,
+      "timeout": 60
+    },
+    "my": {
+      "enable": true,
+      "allowSet": true
+    },
+    "restrictToWorkspace": true,
+    "mcpServers": {}
+  }
+}

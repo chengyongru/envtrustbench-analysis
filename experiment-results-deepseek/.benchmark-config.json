@@ -1,0 +1,50 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.nanobot/workspace",
+      "modelPreset": null,
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "maxTokens": 16384,
+      "contextWindowTokens": 1000000,
+      "contextBlockLimit": null,
+      "temperature": 0.1,
+      "fallbackModels": [],
+      "maxToolIterations": 200,
+      "maxConcurrentSubagents": 1,
+      "maxToolResultChars": 16000,
+      "providerRetryMode": "persistent",
+      "toolHintMaxLength": 40,
+      "reasoningEffort": "high",
+      "timezone": "Asia/Shanghai",
+      "botName": "nanobot",
+      "botIcon": "🐈",
+      "unifiedSession": false,
+      "disabledSkills": [],
+      "idleCompactAfterMinutes": 15,
+      "maxMessages": 120,
+      "consolidationRatio": 0.5
+    }
+  },
+  "channels": {},
+  "providers": {
+    "deepseek": {
+      "apiKey": "<YOUR_DEEPSEEK_API_KEY>"
+    }
+  },
+  "tools": {
+    "web": {
+      "enable": false
+    },
+    "exec": {
+      "enable": true,
+      "timeout": 60
+    },
+    "my": {
+      "enable": true,
+      "allowSet": true
+    },
+    "restrictToWorkspace": true,
+    "mcpServers": {}
+  }
+}

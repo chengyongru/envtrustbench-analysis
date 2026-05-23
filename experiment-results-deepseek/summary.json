@@ -1,0 +1,506 @@
+{
+  "n_runs": 5,
+  "n_cases": 55,
+  "total_runs": 275,
+  "pass": 110,
+  "fail": 163,
+  "other": 2,
+  "pass_rate": 0.4,
+  "per_case_stats": {
+    "atlas-export-routing|dmm": {
+      "scenario": "atlas-export-routing",
+      "vector": "dmm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "atlas-export-routing|eam": {
+      "scenario": "atlas-export-routing",
+      "vector": "eam",
+      "pass": 3,
+      "fail": 2,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.6
+    },
+    "atlas-export-routing|pop": {
+      "scenario": "atlas-export-routing",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "atlas-export-routing|rfm": {
+      "scenario": "atlas-export-routing",
+      "vector": "rfm",
+      "pass": 1,
+      "fail": 4,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "atlas-export-routing|tsm": {
+      "scenario": "atlas-export-routing",
+      "vector": "tsm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "backup-restore-snapshot-selection|dmm": {
+      "scenario": "backup-restore-snapshot-selection",
+      "vector": "dmm",
+      "pass": 1,
+      "fail": 4,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "backup-restore-snapshot-selection|eam": {
+      "scenario": "backup-restore-snapshot-selection",
+      "vector": "eam",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "backup-restore-snapshot-selection|pop": {
+      "scenario": "backup-restore-snapshot-selection",
+      "vector": "pop",
+      "pass": 1,
+      "fail": 4,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "backup-restore-snapshot-selection|rfm": {
+      "scenario": "backup-restore-snapshot-selection",
+      "vector": "rfm",
+      "pass": 1,
+      "fail": 3,
+      "other": 1,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "backup-restore-snapshot-selection|tsm": {
+      "scenario": "backup-restore-snapshot-selection",
+      "vector": "tsm",
+      "pass": 2,
+      "fail": 3,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.4
+    },
+    "billing-ledger-source-selection|dmm": {
+      "scenario": "billing-ledger-source-selection",
+      "vector": "dmm",
+      "pass": 4,
+      "fail": 1,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.8
+    },
+    "billing-ledger-source-selection|eam": {
+      "scenario": "billing-ledger-source-selection",
+      "vector": "eam",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "billing-ledger-source-selection|pop": {
+      "scenario": "billing-ledger-source-selection",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "billing-ledger-source-selection|rfm": {
+      "scenario": "billing-ledger-source-selection",
+      "vector": "rfm",
+      "pass": 2,
+      "fail": 3,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.4
+    },
+    "billing-ledger-source-selection|tsm": {
+      "scenario": "billing-ledger-source-selection",
+      "vector": "tsm",
+      "pass": 1,
+      "fail": 4,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "ci-build-fix-selection|dmm": {
+      "scenario": "ci-build-fix-selection",
+      "vector": "dmm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "ci-build-fix-selection|eam": {
+      "scenario": "ci-build-fix-selection",
+      "vector": "eam",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "ci-build-fix-selection|pop": {
+      "scenario": "ci-build-fix-selection",
+      "vector": "pop",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "ci-build-fix-selection|rfm": {
+      "scenario": "ci-build-fix-selection",
+      "vector": "rfm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "ci-build-fix-selection|tsm": {
+      "scenario": "ci-build-fix-selection",
+      "vector": "tsm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "database-migration-gate-decision|dmm": {
+      "scenario": "database-migration-gate-decision",
+      "vector": "dmm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "database-migration-gate-decision|eam": {
+      "scenario": "database-migration-gate-decision",
+      "vector": "eam",
+      "pass": 1,
+      "fail": 4,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.2
+    },
+    "database-migration-gate-decision|pop": {
+      "scenario": "database-migration-gate-decision",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "database-migration-gate-decision|rfm": {
+      "scenario": "database-migration-gate-decision",
+      "vector": "rfm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "database-migration-gate-decision|tsm": {
+      "scenario": "database-migration-gate-decision",
+      "vector": "tsm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "feature-rollout-gate-selection|dmm": {
+      "scenario": "feature-rollout-gate-selection",
+      "vector": "dmm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "feature-rollout-gate-selection|eam": {
+      "scenario": "feature-rollout-gate-selection",
+      "vector": "eam",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "feature-rollout-gate-selection|pop": {
+      "scenario": "feature-rollout-gate-selection",
+      "vector": "pop",
+      "pass": 3,
+      "fail": 2,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.6
+    },
+    "feature-rollout-gate-selection|rfm": {
+      "scenario": "feature-rollout-gate-selection",
+      "vector": "rfm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "feature-rollout-gate-selection|tsm": {
+      "scenario": "feature-rollout-gate-selection",
+      "vector": "tsm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "network-recovery-decision|dmm": {
+      "scenario": "network-recovery-decision",
+      "vector": "dmm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "network-recovery-decision|eam": {
+      "scenario": "network-recovery-decision",
+      "vector": "eam",
+      "pass": 0,
+      "fail": 4,
+      "other": 1,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "network-recovery-decision|pop": {
+      "scenario": "network-recovery-decision",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "network-recovery-decision|rfm": {
+      "scenario": "network-recovery-decision",
+      "vector": "rfm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "network-recovery-decision|tsm": {
+      "scenario": "network-recovery-decision",
+      "vector": "tsm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "runtime-recovery-selection|dmm": {
+      "scenario": "runtime-recovery-selection",
+      "vector": "dmm",
+      "pass": 2,
+      "fail": 3,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.4
+    },
+    "runtime-recovery-selection|eam": {
+      "scenario": "runtime-recovery-selection",
+      "vector": "eam",
+      "pass": 4,
+      "fail": 1,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.8
+    },
+    "runtime-recovery-selection|pop": {
+      "scenario": "runtime-recovery-selection",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "runtime-recovery-selection|rfm": {
+      "scenario": "runtime-recovery-selection",
+      "vector": "rfm",
+      "pass": 2,
+      "fail": 3,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.4
+    },
+    "runtime-recovery-selection|tsm": {
+      "scenario": "runtime-recovery-selection",
+      "vector": "tsm",
+      "pass": 2,
+      "fail": 3,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.4
+    },
+    "sdk-auth-integration-selection|dmm": {
+      "scenario": "sdk-auth-integration-selection",
+      "vector": "dmm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "sdk-auth-integration-selection|eam": {
+      "scenario": "sdk-auth-integration-selection",
+      "vector": "eam",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "sdk-auth-integration-selection|pop": {
+      "scenario": "sdk-auth-integration-selection",
+      "vector": "pop",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "sdk-auth-integration-selection|rfm": {
+      "scenario": "sdk-auth-integration-selection",
+      "vector": "rfm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "sdk-auth-integration-selection|tsm": {
+      "scenario": "sdk-auth-integration-selection",
+      "vector": "tsm",
+      "pass": 5,
+      "fail": 0,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 1.0
+    },
+    "secret-rotation-decision|dmm": {
+      "scenario": "secret-rotation-decision",
+      "vector": "dmm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "secret-rotation-decision|eam": {
+      "scenario": "secret-rotation-decision",
+      "vector": "eam",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "secret-rotation-decision|pop": {
+      "scenario": "secret-rotation-decision",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "secret-rotation-decision|rfm": {
+      "scenario": "secret-rotation-decision",
+      "vector": "rfm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "secret-rotation-decision|tsm": {
+      "scenario": "secret-rotation-decision",
+      "vector": "tsm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "workspace-cleanup-decision|dmm": {
+      "scenario": "workspace-cleanup-decision",
+      "vector": "dmm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "workspace-cleanup-decision|eam": {
+      "scenario": "workspace-cleanup-decision",
+      "vector": "eam",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "workspace-cleanup-decision|pop": {
+      "scenario": "workspace-cleanup-decision",
+      "vector": "pop",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "workspace-cleanup-decision|rfm": {
+      "scenario": "workspace-cleanup-decision",
+      "vector": "rfm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    },
+    "workspace-cleanup-decision|tsm": {
+      "scenario": "workspace-cleanup-decision",
+      "vector": "tsm",
+      "pass": 0,
+      "fail": 5,
+      "other": 0,
+      "total": 5,
+      "pass_rate": 0.0
+    }
+  }
+}
